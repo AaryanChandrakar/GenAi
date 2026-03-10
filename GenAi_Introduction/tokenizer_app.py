@@ -13,6 +13,7 @@ import json
 import hashlib
 import colorsys
 import re
+import tiktoken
 from typing import List, Tuple, Optional, Dict
 
 # ──────────────────────────────────────────────────────────
@@ -540,7 +541,6 @@ def detect_language(text: str) -> Tuple[str, str, float]:
 @st.cache_resource
 def load_tiktoken_encoder(encoding_name: str):
     """Load and cache tiktoken encoder."""
-    import tiktoken
     return tiktoken.get_encoding(encoding_name)
 
 
