@@ -27,6 +27,34 @@ st.set_page_config(
 )
 
 # ──────────────────────────────────────────────────────────
+# SEO & Social Sharing (Open Graph / Meta Tags)
+# ──────────────────────────────────────────────────────────
+# Note: For these to work on WhatsApp/Social Media, the app must be public.
+# The image URL should be a direct link to your hosted preview image (e.g., on GitHub).
+st.markdown(f"""
+    <head>
+        <!-- Primary Meta Tags -->
+        <title>TokenLens — LLM Tokenizer & Embedding Explorer</title>
+        <meta name="title" content="TokenLens — LLM Tokenizer & Embedding Explorer">
+        <meta name="description" content="A premium interactive dashboard to visualize tokens and explore embeddings across 8+ major LLM models. Free, fast, and beautiful.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://aaryanchandrakar-tokenlens.streamlit.app/">
+        <meta property="og:title" content="⭐ TokenLens — Interactive LLM Explorer">
+        <meta property="og:description" content="Visualize how GPT-4o, Claude 3.5, and LLaMA 3 see your words. Explore embeddings, token counts, and vector heatmaps in real-time.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/aaryanchandrakar/GenAi/main/assets/tokenlens_preview.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://aaryanchandrakar-tokenlens.streamlit.app/">
+        <meta property="twitter:title" content="⭐ TokenLens — Interactive LLM Explorer">
+        <meta property="twitter:description" content="Visualize how GPT-4o, Claude 3.5, and LLaMA 3 see your words. Explore embeddings, token counts, and vector heatmaps in real-time.">
+        <meta property="twitter:image" content="https://raw.githubusercontent.com/aaryanchandrakar/GenAi/main/assets/tokenlens_preview.png">
+    </head>
+""", unsafe_allow_html=True)
+
+# ──────────────────────────────────────────────────────────
 # Custom CSS — Premium Dark Glassmorphism Theme
 # ──────────────────────────────────────────────────────────
 st.markdown("""
